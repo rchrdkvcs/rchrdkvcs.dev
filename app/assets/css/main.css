@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+:root {
+  --ui-radius: 0rem;
+
+  --ui-primary: #111111;
+
+  --ui-bg: #aaaaaa;
+  --ui-bg-muted: #e2e2e2;
+  --ui-bg-elevated: #cccccc;
+  --ui-bg-accented: #888888;
+  --ui-bg-inverted: #555555;
+
+  --ui-text-dimmed: #3a3a3a;
+  --ui-text-muted: #2c2c2c;
+  --ui-text-toned: #1f1f1f;
+  --ui-text: #181818;
+  --ui-text-highlighted: #111111;
+  --ui-text-inverted: #aaaaaa;
+}
