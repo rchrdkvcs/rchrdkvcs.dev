@@ -4,19 +4,19 @@ import type { NavigationMenuItem } from "@nuxt/ui";
 const items = ref<NavigationMenuItem[]>([
   [
     {
-      label: "Home",
+      label: "/home",
       to: "/",
     },
     {
-      label: "Skills",
+      label: "/skills",
       to: "/skills",
     },
     {
-      label: "Projects",
+      label: "/projects",
       to: "/projects",
     },
     {
-      label: "Experiences",
+      label: "/experiences",
       to: "/experiences",
     },
   ],
@@ -25,17 +25,14 @@ const items = ref<NavigationMenuItem[]>([
 
 <template>
   <UApp>
-    <UHeader>
+    <UHeader :ui="{ root: 'border-primary' }">
       <template #title>
-        <NuxtLink to="/" class="font-bold">Hello World</NuxtLink>
+        <NuxtLink to="/">rchrdkvcs.dev</NuxtLink>
       </template>
 
-      <UNavigationMenu
-        :items="items"
-        :ui="{
-          root: 'border-black',
-        }"
-      />
+      <template #right>
+        <UNavigationMenu :items="items" variant="link" />
+      </template>
 
       <template #body>
         <UNavigationMenu :items="items" orientation="vertical" />

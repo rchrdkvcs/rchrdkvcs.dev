@@ -5,5 +5,11 @@ export default defineAppConfig({
         base: "cursor-pointer",
       },
     },
+    pageSection: {
+      slots: {
+        title: "!text-left",
+        description: "!text-left",
+      },
+    },
   },
 });

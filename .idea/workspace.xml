@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5dd397c-5de2-43ee-9e91-00ca295c6efa" name="Changes" comment="chore: init Nuxt project">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pages/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/avatar.png" afterDir="false" />
+    <list default="true" id="d5dd397c-5de2-43ee-9e91-00ca295c6efa" name="Changes" comment="feat: implement landing page with navigation and skills showcase">
+      <change afterPath="$PROJECT_DIR$/app/components/ExperiencesSection.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/ProjectsSection.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/SkillsSection.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,26 +22,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Composition API Component" />
         <option value="CSS File" />
         <option value="TypeScript File" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="next" />
+        <entry key="$PROJECT_DIR$" value="feat/landing" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "rchrdkvcs"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;rchrdkvcs&quot;
   }
-}]]></component>
+}</component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -53,12 +51,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feat/landing" />
-                    <option name="lastUsedInstant" value="1763483061" />
+                    <option name="branchName" value="next" />
+                    <option name="lastUsedInstant" value="1763550256" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="next" />
-                    <option name="lastUsedInstant" value="1763477403" />
+                    <option name="branchName" value="feat/landing" />
+                    <option name="lastUsedInstant" value="1763550226" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -73,15 +71,15 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/rchrdkvcs/rchrdkvcs.dev.git",
-    "accountId": "61a411be-546d-49e0-912c-dcc8c68c7bc4"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/rchrdkvcs/rchrdkvcs.dev.git&quot;,
+    &quot;accountId&quot;: &quot;61a411be-546d-49e0-912c-dcc8c68c7bc4&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="35ejLMdTfG8A8bFEmbFtuj4BftK" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -97,10 +95,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feat/landing",
+    "git-widget-placeholder": "next",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
-    "last_opened_file_path": "C:/Users/rkovacs/Lab/rchrdkvcs.dev/app/assets/images",
+    "last_opened_file_path": "C:/Users/rkovacs/Lab/rchrdkvcs.dev/app/components",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -122,6 +120,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rkovacs\Lab\rchrdkvcs.dev\app\components" />
       <recent name="C:\Users\rkovacs\Lab\rchrdkvcs.dev\app\assets\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -158,6 +157,8 @@
       <option name="presentableId" value="Default" />
       <updated>1763477376027</updated>
       <workItem from="1763477377706" duration="5643000" />
+      <workItem from="1763550113905" duration="3295000" />
+      <workItem from="1763560434320" duration="5414000" />
     </task>
     <task id="LOCAL-00001" summary="chore: clear of next.js project">
       <option name="closed" value="true" />
