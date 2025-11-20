@@ -10,10 +10,29 @@
       description="Full-Stack Developer, with a passion for building applications and websites."
       :links="[
         {
-          icon: '',
-          label: 'Contact Me',
+          icon: 'lucide:mail',
+          label: 'root@rchrdkvcs.dev',
           to: 'mailto:root@rchrdkvcs.dev',
           variant: 'outline',
+          target: '_blank',
+        },
+        {
+          icon: 'lucide:github',
+          to: 'https://github.com/rchrdkvcs',
+          variant: 'outline',
+          target: '_blank',
+        },
+        {
+          icon: 'lucide:twitter',
+          to: 'https://x.com/rchrdkvcs',
+          variant: 'outline',
+          target: '_blank',
+        },
+        {
+          icon: 'lucide:linkedin',
+          to: 'https://www.linkedin.com/in/rchrdkvcs/',
+          variant: 'outline',
+          target: '_blank',
         },
       ]"
     >

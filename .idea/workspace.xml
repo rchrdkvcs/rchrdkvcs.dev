@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5dd397c-5de2-43ee-9e91-00ca295c6efa" name="Changes" comment="feat: implement landing page with navigation and skills showcase">
-      <change afterPath="$PROJECT_DIR$/app/components/ExperiencesSection.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/ProjectsSection.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/SkillsSection.vue" afterDir="false" />
+    <list default="true" id="d5dd397c-5de2-43ee-9e91-00ca295c6efa" name="Changes" comment="feat: add experiences, projects, and skills sections to the landing page">
+      <change afterPath="$PROJECT_DIR$/app/composables/useExperiences.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/composables/useProjects.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/composables/useSkills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/error.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pages/projects/[slug].vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pages/projects/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ExperiencesSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ExperiencesSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ProjectsSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProjectsSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/SkillsSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/SkillsSection.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,34 +95,34 @@
     <option name="showScratchesAndConsoles" value="false" />
     <option name="showURL" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "next",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "last_opened_file_path": "C:/Users/rkovacs/Lab/rchrdkvcs.dev/app/components",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\rkovacs\\Lab\\rchrdkvcs.dev\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "C:\\Users\\rkovacs\\Lab\\rchrdkvcs.dev\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;next&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rkovacs/Lab/rchrdkvcs.dev/app/components&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\rkovacs\\Lab\\rchrdkvcs.dev\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\rkovacs\\Lab\\rchrdkvcs.dev\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "vue.recent.templates": [
-      "Vue Composition API Component"
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\rkovacs\Lab\rchrdkvcs.dev\app\components" />
@@ -158,7 +163,9 @@
       <updated>1763477376027</updated>
       <workItem from="1763477377706" duration="5643000" />
       <workItem from="1763550113905" duration="3295000" />
-      <workItem from="1763560434320" duration="5414000" />
+      <workItem from="1763560434320" duration="6000000" />
+      <workItem from="1763631973335" duration="1308000" />
+      <workItem from="1763633366024" duration="4525000" />
     </task>
     <task id="LOCAL-00001" summary="chore: clear of next.js project">
       <option name="closed" value="true" />
@@ -176,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763477805807</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add experiences, projects, and skills sections to the landing page">
+      <option name="closed" value="true" />
+      <created>1763568366535</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763568366535</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +200,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: clear of next.js project" />
     <MESSAGE value="chore: init Nuxt project" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: init Nuxt project" />
+    <MESSAGE value="feat: add experiences, projects, and skills sections to the landing page" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add experiences, projects, and skills sections to the landing page" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

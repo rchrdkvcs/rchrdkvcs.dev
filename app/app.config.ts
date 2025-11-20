@@ -7,6 +7,7 @@ export default defineAppConfig({
     },
     pageSection: {
       slots: {
+        container: "!py-8",
         title: "!text-left",
         description: "!text-left",
       },
