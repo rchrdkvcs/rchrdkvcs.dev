@@ -10,4 +10,7 @@ export default defineNuxtConfig({
   ui: {
     colorMode: false,
   },
+    app: {
+      pageTransition: true
+    }
 });

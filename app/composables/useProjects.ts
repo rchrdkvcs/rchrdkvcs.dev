@@ -25,6 +25,56 @@ export const useProjects = () => {
         },
       ],
     },
+      {
+          project: "stream-board",
+          description:
+              "Stream Board is a simple way to create FaQ overlay for streaming. It is a web application that allows you to display questions and answers on your stream after added it to the dashboard.",
+          repo: "",
+          link: "https://adonisjs.com/",
+          badge: [
+              {
+                  label: "AdonisJS",
+                  icon: "simple-icons:adonisjs",
+              },
+              {
+                  label: "Postgre SQL",
+                  icon: "simple-icons:postgresql",
+              },
+              {
+                  label: "Tailwind CSS",
+                  icon: "simple-icons:tailwindcss",
+              },
+              {
+                  label: "Framer Motion",
+                  icon: "simple-icons:framer",
+              },
+          ],
+      },
+      {
+          project: "stream-board",
+          description:
+              "Stream Board is a simple way to create FaQ overlay for streaming. It is a web application that allows you to display questions and answers on your stream after added it to the dashboard.",
+          repo: "",
+          link: "https://adonisjs.com/",
+          badge: [
+              {
+                  label: "AdonisJS",
+                  icon: "simple-icons:adonisjs",
+              },
+              {
+                  label: "Postgre SQL",
+                  icon: "simple-icons:postgresql",
+              },
+              {
+                  label: "Tailwind CSS",
+                  icon: "simple-icons:tailwindcss",
+              },
+              {
+                  label: "Framer Motion",
+                  icon: "simple-icons:framer",
+              },
+          ],
+      },
     {
       project: "docs-site",
       description:

@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5dd397c-5de2-43ee-9e91-00ca295c6efa" name="Changes" comment="feat: add experiences, projects, and skills sections to the landing page">
-      <change afterPath="$PROJECT_DIR$/app/composables/useExperiences.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/composables/useProjects.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/composables/useSkills.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/error.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pages/projects/[slug].vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pages/projects/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ExperiencesSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ExperiencesSection.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ProjectsSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProjectsSection.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/SkillsSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/SkillsSection.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composables/useProjects.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/composables/useProjects.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +76,9 @@
     &quot;accountId&quot;: &quot;61a411be-546d-49e0-912c-dcc8c68c7bc4&quot;
   }
 }</component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -95,34 +92,34 @@
     <option name="showScratchesAndConsoles" value="false" />
     <option name="showURL" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;next&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rkovacs/Lab/rchrdkvcs.dev/app/components&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\rkovacs\\Lab\\rchrdkvcs.dev\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\rkovacs\\Lab\\rchrdkvcs.dev\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "next",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "C:/Users/rkovacs/Lab/rchrdkvcs.dev/app/components",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\rkovacs\\Lab\\rchrdkvcs.dev\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "/Users/rchrdkvcs/Lab/rchrdkvcs.dev/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;vue.recent.templates&quot;: [
-      &quot;Vue Composition API Component&quot;
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\rkovacs\Lab\rchrdkvcs.dev\app\components" />

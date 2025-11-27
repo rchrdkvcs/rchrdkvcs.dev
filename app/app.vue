@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from "@nuxt/ui";
 
-const items = ref<NavigationMenuItem[]>([
+const navItems = ref<NavigationMenuItem[]>([
   [
     {
       label: "home",
@@ -32,19 +32,27 @@ const items = ref<NavigationMenuItem[]>([
 
       <template #right>
         <UNavigationMenu
-          :items="items"
+          :items="navItems"
           variant="link"
           class="hidden lg:block"
         />
       </template>
 
       <template #body>
-        <UNavigationMenu :items="items" orientation="vertical" />
+        <UNavigationMenu :items="navItems" orientation="vertical" />
       </template>
     </UHeader>
 
     <UMain>
       <NuxtPage />
     </UMain>
+
+    <USeparator color="primary" />
+
+    <UFooter>
+      <template #left>
+        <p class="text-muted text-sm">Copyright © {{ new Date().getFullYear() }}</p>
+      </template>
+    </UFooter>
   </UApp>
 </template>
