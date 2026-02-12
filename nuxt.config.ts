@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   css: ["./app/assets/css/main.css"],
   modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/image", "@nuxt/ui"],
   ui: {
-    colorMode: false,
+    colorMode: true,
   },
     app: {
       pageTransition: true

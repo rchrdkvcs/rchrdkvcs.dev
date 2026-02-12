@@ -2,6 +2,6 @@
 
 <template>
   <UContainer>
-    <ProjectsSection show-all />
+    <ExperiencesSection />
   </UContainer>
 </template>
