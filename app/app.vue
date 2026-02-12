@@ -25,15 +25,17 @@ const navItems = ref<NavigationMenuItem[]>([
 
 <template>
   <UApp>
-    <UHeader :ui="{ root: 'border-none backdrop-blur-none bg-transparent' }">
+    <UHeader :ui="{ root: 'border border-black max-w-7xl mx-auto bg-default' }">
       <template #title>
-        <NuxtLink to="/">rchrdkvcs.dev</NuxtLink>
+        <NuxtLink to="/">
+          <Logo class="size-16" />
+        </NuxtLink>
       </template>
 
       <UNavigationMenu
         :items="navItems"
         variant="link"
-        class="hidden lg:block bg-default px-4 border border-black"
+        class="hidden lg:block"
       />
 
       <template #body>

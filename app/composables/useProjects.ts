@@ -126,5 +126,227 @@ export const useProjects = () => {
         },
       ],
     },
+    {
+      project: "SoundVault",
+      slug: "soundvault",
+      description:
+        "A full-stack music platform for producers and sound designers to upload, share, and discover VST presets and sound packs, built as a PWA with Vue 3 and AdonisJS.",
+      repo: "https://github.com/rchrdkvcs/soundvault.cloud",
+      link: "",
+      badge: [
+        {
+          label: "Vue",
+          icon: "simple-icons:vuedotjs",
+        },
+        {
+          label: "AdonisJS",
+          icon: "simple-icons:adonisjs",
+        },
+        {
+          label: "TypeScript",
+          icon: "simple-icons:typescript",
+        },
+        {
+          label: "PostgreSQL",
+          icon: "simple-icons:postgresql",
+        },
+      ],
+    },
+    {
+      project: "Pokerify",
+      slug: "pokerify",
+      description:
+        "A REST API for simulating Texas Hold'em poker games with JWT authentication, AI opponents, and full game logic including hand evaluation and betting rounds.",
+      repo: "https://github.com/rchrdkvcs/pokerify",
+      link: "",
+      badge: [
+        {
+          label: "NestJS",
+          icon: "simple-icons:nestjs",
+        },
+        {
+          label: "MongoDB",
+          icon: "simple-icons:mongodb",
+        },
+        {
+          label: "TypeScript",
+          icon: "simple-icons:typescript",
+        },
+        {
+          label: "Docker",
+          icon: "simple-icons:docker",
+        },
+      ],
+    },
+    {
+      project: "Shorty",
+      slug: "shorty",
+      description:
+        "A URL shortener with organization management, QR code generation, and link analytics, built with AdonisJS and Nuxt.",
+      repo: "https://github.com/rchrdkvcs/shorty",
+      link: "",
+      badge: [
+        {
+          label: "AdonisJS",
+          icon: "simple-icons:adonisjs",
+        },
+        {
+          label: "Nuxt",
+          icon: "simple-icons:nuxtdotjs",
+        },
+        {
+          label: "TypeScript",
+          icon: "simple-icons:typescript",
+        },
+        {
+          label: "PostgreSQL",
+          icon: "simple-icons:postgresql",
+        },
+      ],
+    },
+    {
+      project: "CloudCost",
+      slug: "cloudcost",
+      description:
+        "A cloud pricing comparison tool with AI-powered recommendations that aggregates pricing data from multiple providers.",
+      repo: "https://github.com/rchrdkvcs/cloudcost",
+      link: "",
+      badge: [
+        {
+          label: "AdonisJS",
+          icon: "simple-icons:adonisjs",
+        },
+        {
+          label: "Nuxt",
+          icon: "simple-icons:nuxtdotjs",
+        },
+        {
+          label: "TypeScript",
+          icon: "simple-icons:typescript",
+        },
+      ],
+    },
+    {
+      project: "Create Aduxt",
+      slug: "create-aduxt",
+      description:
+        "A CLI scaffolding tool for creating fullstack monorepos with AdonisJS and Nuxt, featuring type-safe API communication via Tuyau and Bun.",
+      repo: "https://github.com/rchrdkvcs/create-aduxt",
+      link: "",
+      badge: [
+        {
+          label: "AdonisJS",
+          icon: "simple-icons:adonisjs",
+        },
+        {
+          label: "Nuxt",
+          icon: "simple-icons:nuxtdotjs",
+        },
+        {
+          label: "Bun",
+          icon: "simple-icons:bun",
+        },
+      ],
+    },
+    {
+      project: "Gitify",
+      slug: "gitify",
+      description:
+        "A GitHub project management tool for organizing repositories into projects and favorites, built with the Aduxt monorepo stack.",
+      repo: "https://github.com/rchrdkvcs/gitify",
+      link: "",
+      badge: [
+        {
+          label: "AdonisJS",
+          icon: "simple-icons:adonisjs",
+        },
+        {
+          label: "Nuxt",
+          icon: "simple-icons:nuxtdotjs",
+        },
+        {
+          label: "TypeScript",
+          icon: "simple-icons:typescript",
+        },
+        {
+          label: "Docker",
+          icon: "simple-icons:docker",
+        },
+      ],
+    },
+    {
+      project: "ox_lib Reskin",
+      slug: "ox-lib-reskin",
+      description:
+        "A custom UI reskin for the ox_lib FiveM resource, providing a modern redesign of menus, notifications, and context panels for roleplay servers.",
+      repo: "https://github.com/rchrdkvcs/ox-lib-reskin",
+      link: "",
+      badge: [
+        {
+          label: "TypeScript",
+          icon: "simple-icons:typescript",
+        },
+        {
+          label: "React",
+          icon: "simple-icons:react",
+        },
+        {
+          label: "FiveM",
+          icon: "simple-icons:fivem",
+        },
+      ],
+    },
+    {
+      project: "Hexagone6",
+      slug: "hexagone6",
+      description:
+        "A full-stack esports platform for managing an esports organization, featuring event registration, LAN management, guides, FAQ, partner showcases, and real-time stream widgets.",
+      repo: "https://github.com/Hexagone6",
+      link: "",
+      badge: [
+        {
+          label: "Nuxt",
+          icon: "simple-icons:nuxtdotjs",
+        },
+        {
+          label: "AdonisJS",
+          icon: "simple-icons:adonisjs",
+        },
+        {
+          label: "TypeScript",
+          icon: "simple-icons:typescript",
+        },
+        {
+          label: "Docker",
+          icon: "simple-icons:docker",
+        },
+      ],
+    },
+    {
+      project: "Just Fucking Use Vue.js",
+      slug: "just-fucking-use-vuejs",
+      description:
+        "Member of an open-source community organization dedicated to promoting Vue.js, Nuxt, and Nuxt UI through curated websites and a collaborative blog.",
+      repo: "https://github.com/Just-Fucking-Use-Vue-js",
+      link: "",
+      badge: [
+        {
+          label: "Vue",
+          icon: "simple-icons:vuedotjs",
+        },
+        {
+          label: "Nuxt",
+          icon: "simple-icons:nuxtdotjs",
+        },
+        {
+          label: "Nuxt UI",
+          icon: "simple-icons:nuxtdotjs",
+        },
+        {
+          label: "Open Source",
+          icon: "simple-icons:opensourceinitiative",
+        },
+      ],
+    },
   ];
 };
