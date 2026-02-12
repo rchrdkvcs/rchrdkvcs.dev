@@ -25,18 +25,16 @@ const navItems = ref<NavigationMenuItem[]>([
 
 <template>
   <UApp>
-    <UHeader :ui="{ root: 'border-primary' }">
+    <UHeader :ui="{ root: 'border-none backdrop-blur-none bg-transparent' }">
       <template #title>
         <NuxtLink to="/">rchrdkvcs.dev</NuxtLink>
       </template>
 
-      <template #right>
-        <UNavigationMenu
-          :items="navItems"
-          variant="link"
-          class="hidden lg:block"
-        />
-      </template>
+      <UNavigationMenu
+        :items="navItems"
+        variant="link"
+        class="hidden lg:block bg-default px-4 border border-black"
+      />
 
       <template #body>
         <UNavigationMenu :items="navItems" orientation="vertical" />
@@ -51,7 +49,9 @@ const navItems = ref<NavigationMenuItem[]>([
 
     <UFooter>
       <template #left>
-        <p class="text-muted text-sm">Copyright © {{ new Date().getFullYear() }}</p>
+        <p class="text-muted text-sm">
+          Copyright © {{ new Date().getFullYear() }}
+        </p>
       </template>
     </UFooter>
   </UApp>
