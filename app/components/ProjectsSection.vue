@@ -12,8 +12,9 @@ defineProps<{
       <UPageCard
         v-for="(card, index) in showAll ? projects : projects.slice(0, 5)"
         :key="index"
+        :to="`/projects/${card.slug}`"
         :ui="{
-          root: 'ring-primary',
+          root: 'ring-primary hover:ring-2 transition-all',
           header: 'flex justify-between items-center w-full mb-2',
           footer: 'flex flex-wrap gap-2',
         }"
@@ -23,26 +24,36 @@ defineProps<{
           <h3 class="text-xl font-semibold">{{ card.project }}</h3>
           <div>
             <UButton
+              v-if="card.repo"
               icon="mdi:github"
               variant="ghost"
               size="lg"
               target="_blank"
               :to="card.repo"
+              @click.stop
             />
             <UButton
+              v-if="card.link"
               icon="lucide:external-link"
               variant="ghost"
               size="lg"
               target="_blank"
               :to="card.link"
+              @click.stop
+            />
+            <UButton
+              icon="lucide:arrow-right"
+              variant="ghost"
+              size="lg"
+              :to="`/projects/${card.slug}`"
             />
           </div>
         </template>
 
         <template #footer>
           <UBadge
-            v-for="(badge, index) in card.badge"
-            :key="index"
+            v-for="(badge, badgeIndex) in card.badge"
+            :key="badgeIndex"
             v-bind="badge"
           />
         </template>
