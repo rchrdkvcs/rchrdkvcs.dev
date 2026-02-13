@@ -1,27 +1,29 @@
 <script setup lang="ts">
-const projects = useProjects();
-
 defineProps<{
   showAll?: boolean;
 }>();
+
+const { data: projects } = await useAsyncData(`projects`, () =>
+  queryCollection("projects").order("date", "DESC").all(),
+);
 </script>
 
 <template>
   <UPageSection title="projects" description="Here are some of my projects.">
     <UPageColumns>
       <UPageCard
-        v-for="(card, index) in showAll ? projects : projects.slice(0, 5)"
+        v-for="(card, index) in showAll ? projects : projects?.slice(0, 5)"
         :key="index"
-        :to="`/projects/${card.slug}`"
+        :to="card.stem"
         :ui="{
-          root: 'ring-primary hover:ring-2 transition-all',
+          root: 'ring-primary transition-all',
           header: 'flex justify-between items-center w-full mb-2',
           footer: 'flex flex-wrap gap-2',
         }"
         :description="card.description"
       >
         <template #header>
-          <h3 class="text-xl font-semibold">{{ card.project }}</h3>
+          <h3 class="text-xl font-semibold">{{ card.title }}</h3>
           <div>
             <UButton
               v-if="card.repo"
@@ -45,23 +47,23 @@ defineProps<{
               icon="lucide:arrow-right"
               variant="ghost"
               size="lg"
-              :to="`/projects/${card.slug}`"
+              :to="card.stem"
             />
           </div>
         </template>
 
         <template #footer>
           <UBadge
-            v-for="(badge, badgeIndex) in card.badge"
+            v-for="(badge, badgeIndex) in card.tags"
             :key="badgeIndex"
-            v-bind="badge"
+            :label="badge"
           />
         </template>
       </UPageCard>
     </UPageColumns>
 
     <UButton
-      v-if="!showAll && projects.length > 5"
+      v-if="!showAll && projects?.length > 5"
       icon="lucide:arrow-right"
       label="view all projects"
       to="/projects"

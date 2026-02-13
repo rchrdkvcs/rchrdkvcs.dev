@@ -10,26 +10,26 @@
       description="Full-Stack Developer, with a passion for building applications and websites."
       :links="[
         {
-          icon: 'lucide:mail',
+          icon: 'hugeicons:mail-01',
           label: 'root@rchrdkvcs.dev',
           to: 'mailto:root@rchrdkvcs.dev',
           variant: 'outline',
           target: '_blank',
         },
         {
-          icon: 'lucide:github',
+          icon: 'hugeicons:github',
           to: 'https://github.com/rchrdkvcs',
           variant: 'outline',
           target: '_blank',
         },
         {
-          icon: 'lucide:twitter',
+          icon: 'hugeicons:new-twitter',
           to: 'https://x.com/rchrdkvcs',
           variant: 'outline',
           target: '_blank',
         },
         {
-          icon: 'lucide:linkedin',
+          icon: 'hugeicons:linkedin-02',
           to: 'https://www.linkedin.com/in/rchrdkvcs/',
           variant: 'outline',
           target: '_blank',
@@ -39,7 +39,7 @@
       <NuxtImg
         src="/images/avatar.png"
         alt="Avatar"
-        class="mx-auto w-96 shadow-2xl -rotate-6"
+        class="mx-auto w-96 shadow-2xl -rotate-2"
       />
     </UPageHero>
 

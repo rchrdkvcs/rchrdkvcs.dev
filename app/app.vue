@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from "@nuxt/ui";
+const route = useRoute();
 
 const navItems = ref<NavigationMenuItem[]>([
   [
@@ -14,6 +15,7 @@ const navItems = ref<NavigationMenuItem[]>([
     {
       label: "projects",
       to: "/projects",
+      active: computed(() => route.path.startsWith("/projects")),
     },
     {
       label: "experiences",
@@ -25,10 +27,10 @@ const navItems = ref<NavigationMenuItem[]>([
 
 <template>
   <UApp>
-    <UHeader :ui="{ root: 'border border-black max-w-7xl mx-auto bg-default' }">
+    <UHeader :ui="{ root: 'border-black backdrop-blur-none bg-default' }">
       <template #title>
         <NuxtLink to="/">
-          <Logo class="size-16" />
+          <Logo class="size-12" />
         </NuxtLink>
       </template>
 
@@ -40,6 +42,14 @@ const navItems = ref<NavigationMenuItem[]>([
 
       <template #body>
         <UNavigationMenu :items="navItems" orientation="vertical" />
+      </template>
+
+      <template #right>
+        <UButton
+          label="Contact me"
+          icon="hugeicons:mail-01"
+          href="mailto:root@rchrdkvcs.dev"
+        />
       </template>
     </UHeader>
 

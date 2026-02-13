@@ -9,8 +9,20 @@ export default defineNuxtConfig({
   modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/image", "@nuxt/ui"],
   ui: {
     colorMode: true,
+    experimental: {
+      componentDetection: true,
+    },
   },
-    app: {
-      pageTransition: true
-    }
+  app: {
+    pageTransition: true,
+  },
+  components: [
+    {
+      path: "~/components",
+      pathPrefix: false,
+    },
+  ],
+  content: {
+    experimental: { nativeSqlite: true },
+  },
 });

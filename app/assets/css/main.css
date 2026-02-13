@@ -7,20 +7,21 @@
 
   --ui-radius: 0rem;
 
-  --ui-primary: #111111;
+    --ui-primary: #111111;
+    --ui-bg: #aaaaaa;
 
-  --ui-bg: #aaaaaa;
-  --ui-bg-muted: #e2e2e2;
-  --ui-bg-elevated: #cccccc;
-  --ui-bg-accented: #888888;
-  --ui-bg-inverted: #555555;
+    --ui-bg-muted: #999999;
+    --ui-bg-elevated: #bfbfbf;
+    --ui-bg-accented: #8c8c8c;
+    --ui-bg-inverted: #333333;
 
-  --ui-text-dimmed: #3a3a3a;
-  --ui-text-muted: #2c2c2c;
-  --ui-text-toned: #1f1f1f;
-  --ui-text: #181818;
-  --ui-text-highlighted: #111111;
-  --ui-text-inverted: #aaaaaa;
+    --ui-text-dimmed: #525252;
+    --ui-text-muted: #333333;
+    --ui-text-toned: #222222;
+    --ui-text: #111111;
+
+    --ui-text-highlighted: #000000;
+    --ui-text-inverted: #e5e5e5;
 }
 
 * > * {

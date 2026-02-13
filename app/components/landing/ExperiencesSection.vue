@@ -13,6 +13,10 @@ const experiences = useExperiences();
       class="w-full"
       size="xl"
       color="neutral"
-    />
+    >
+      <template #description="{ item }">
+        <MDC :value="item.description" />
+      </template>
+    </UTimeline>
   </UPageSection>
 </template>
