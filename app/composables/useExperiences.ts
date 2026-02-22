@@ -10,6 +10,15 @@ export const useExperiences = () => {
       },
     },
     {
+      date: "2024 - Présent",
+      title: "Responsable Infrastructure Numérique @ Salty Academy",
+      description:
+        "📍 Remote\n\n- Conception et développement du site vitrine et de la plateforme d'apprentissage de l'académie\n- Mise en place et maintenance des outils internes (gestion des membres, intégrations Discord, tableaux de bord)\n- Gestion de l'infrastructure technique et déploiement des applications",
+      avatar: {
+        src: "/images/sa.png",
+      },
+    },
+    {
       date: "Déc. 2022 - Août 2024",
       title: "Développeur Web — Formation en autodidacte",
       description:
