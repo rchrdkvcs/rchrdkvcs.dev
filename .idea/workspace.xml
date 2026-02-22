@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d5dd397c-5de2-43ee-9e91-00ca295c6efa" name="Changes" comment="feat: add Dockerfile for building and running the application">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ExperiencesSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/landing/ExperiencesSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ProjectsSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/landing/ProjectsSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/SkillsSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/landing/SkillsSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composables/useExperiences.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/composables/useExperiences.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/projects/[slug].vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/projects/[slug].vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/projects/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/projects/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/rkovacs/Lab/rchrdkvcs.dev" value="35ejLMdTfG8A8bFEmbFtuj4BftK" />
+    </persistenceIdMap>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="42" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+        <option value="Vue Composition API Component" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feat/landing" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;rchrdkvcs&quot;
+  }
+}</component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="next" />
+                    <option name="lastUsedInstant" value="1763550256" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feat/landing" />
+                    <option name="lastUsedInstant" value="1763550226" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1763477402" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/rchrdkvcs/rchrdkvcs.dev.git",
+    "accountId": "00e5bb49-4709-44ef-a01e-f797dfed4147"
+  }
+}]]></component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="35ejLMdTfG8A8bFEmbFtuj4BftK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+    <option name="showURL" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "next",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "C:/Users/rkovacs/Lab/rchrdkvcs.dev/app/components",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\rkovacs\\Lab\\rchrdkvcs.dev\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "C:\\Users\\rkovacs\\Lab\\rchrdkvcs.dev\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
+    ]
+  }
+}]]></component>
+  <component name="RecapSpentCounter">
+    <option name="endsOfQuotaMs" value="1772485200000" />
+    <option name="spentUsd" value="0.01339925" />
+  </component>
+  <component name="RecapUselessUpdatesCounter">
+    <option name="suspendCountdown" value="9" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rkovacs\Lab\rchrdkvcs.dev\app\components" />
+      <recent name="C:\Users\rkovacs\Lab\rchrdkvcs.dev\app\assets\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rkovacs\Lab\rchrdkvcs.dev\app\components\landing" />
+      <recent name="C:\Users\rkovacs\Lab\rchrdkvcs.dev\public" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.30387.83" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5dd397c-5de2-43ee-9e91-00ca295c6efa" name="Changes" comment="" />
+      <created>1763477376027</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763477376027</updated>
+      <workItem from="1763477377706" duration="5643000" />
+      <workItem from="1763550113905" duration="3295000" />
+      <workItem from="1763560434320" duration="6000000" />
+      <workItem from="1763631973335" duration="1308000" />
+      <workItem from="1763633366024" duration="4525000" />
+    </task>
+    <task id="LOCAL-00001" summary="chore: clear of next.js project">
+      <option name="closed" value="true" />
+      <created>1763477469512</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763477469512</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chore: init Nuxt project">
+      <option name="closed" value="true" />
+      <created>1763477805807</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1763477805807</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: add experiences, projects, and skills sections to the landing page">
+      <option name="closed" value="true" />
+      <created>1763568366535</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763568366535</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: add Dockerfile for building and running the application">
+      <option name="closed" value="true" />
+      <created>1770975669763</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1770975669763</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="nuxt.config.ts" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore: clear of next.js project" />
+    <MESSAGE value="chore: init Nuxt project" />
+    <MESSAGE value="feat: add experiences, projects, and skills sections to the landing page" />
+    <MESSAGE value="feat: add Dockerfile for building and running the application" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add Dockerfile for building and running the application" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

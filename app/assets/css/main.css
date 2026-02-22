@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+:root {
+  --font-sans: "Public Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --ui-radius: 0rem;
+
+    --ui-primary: #111111;
+    --ui-bg: #aaaaaa;
+
+    --ui-bg-muted: #999999;
+    --ui-bg-elevated: #bfbfbf;
+    --ui-bg-accented: #8c8c8c;
+    --ui-bg-inverted: #333333;
+
+    --ui-text-dimmed: #525252;
+    --ui-text-muted: #333333;
+    --ui-text-toned: #222222;
+    --ui-text: #111111;
+
+    --ui-text-highlighted: #000000;
+    --ui-text-inverted: #e5e5e5;
+}
+
+* > * {
+    font-family: var(--font-mono), serif;
+}
