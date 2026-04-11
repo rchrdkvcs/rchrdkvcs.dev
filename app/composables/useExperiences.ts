@@ -1,48 +1,48 @@
 export const useExperiences = () => {
   return [
     {
-      date: "Sept. 2024 - Sept. 2026",
-      title: "Développeur Flux & Data @ Le Roy Logistique",
+      date: "Sep. 2024 - Sep. 2026",
+      title: "Data & Workflow Developer @ Le Roy Logistique",
       description:
-        "📍 St Jacques, France\n\n- Conception et développement d'applications web full-stack pour la gestion de flux et de données métiers\n- Mise en place et intégration de pipelines CI/CD pour automatiser les déploiements et les tests\n- Collaboration avec les équipes métiers pour traduire des besoins opérationnels en solutions techniques",
+        "- Designed and developed full-stack web applications for business data and workflow management\n- Set up and integrated CI/CD pipelines to automate deployments and testing\n- Collaborated with business teams to translate operational requirements into technical solutions",
       avatar: {
         src: "/images/lrl.png",
       },
     },
     {
-      date: "2024 - Présent",
-      title: "Responsable Infrastructure Numérique @ Salty Academy",
+      date: "2024 - Present",
+      title: "Digital Infrastructure Lead @ Salty Academy",
       description:
-        "📍 Remote\n\n- Conception et développement du site vitrine et de la plateforme d'apprentissage de l'académie\n- Mise en place et maintenance des outils internes (gestion des membres, intégrations Discord, tableaux de bord)\n- Gestion de l'infrastructure technique et déploiement des applications",
+        "- Designed and developed the academy's showcase website and learning platform\n- Built and maintained internal tools (member management, Discord integrations, dashboards)\n- Managed technical infrastructure and application deployment",
       avatar: {
         src: "/images/sa.png",
       },
     },
     {
-      date: "Déc. 2022 - Août 2024",
-      title: "Développeur Web — Formation en autodidacte",
+      date: "Dec. 2022 - Aug. 2024",
+      title: "Web Developer — Self-Taught",
       description:
-        "📍 Rennes, France\n\n- Conception et développement d'applications web dans le cadre de projets personnels\n- Apprentissage et mise en pratique des architectures logicielles (séparation des responsabilités)\n- Auto-formation continue via documentation officielle, veille technologique et expérimentations",
+        "- Designed and developed web applications through personal projects\n- Learned and applied software architecture principles (separation of concerns)\n- Continuous self-training through official documentation, technology monitoring, and hands-on experimentation",
       avatar: {
-        src: "/images/avatar.png",
+        src: "/images/rchrdkvcs.png",
       },
     },
     {
       date: "Jan. 2023 - Jan. 2023",
-      title: "Affréteur @ Hellman Worldwide Logistics",
+      title: "Freight Broker @ Hellman Worldwide Logistics",
       description:
-        "📍 Vern sur Seiche, France\n\n- Observation et participation à la gestion des flux de transport nationaux et internationaux\n- Analyse des contraintes logistiques et des processus opérationnels\n- Compréhension des enjeux de coordination entre différents acteurs métiers",
+        "- Observed and participated in the management of domestic and international transport flows\n- Analyzed logistical constraints and operational processes\n- Gained insight into coordination challenges across multiple business stakeholders",
       avatar: {
-        src: "/images/avatar.png",
+        src: "/images/antargaz.png",
       },
     },
     {
-      date: "Sep. 2021 - Août 2023",
-      title: "Logisticien @ Antargaz Energies",
+      date: "Sep. 2021 - Aug. 2023",
+      title: "Logistics Coordinator @ Antargaz Energies",
       description:
-        "📍 Vern sur Seiche, France\n\n- Suivi et optimisation des indicateurs de performance opérationnels\n- Relation client et coordination avec les équipes internes\n- Développement d'une forte rigueur organisationnelle et d'une approche orientée efficacité",
+        "- Monitored and optimized operational performance indicators\n- Managed client relationships and coordinated with internal teams\n- Developed strong organizational discipline and an efficiency-driven approach",
       avatar: {
-        src: "/images/avatar.png",
+        src: "/images/hwl.png",
       },
     },
   ];
