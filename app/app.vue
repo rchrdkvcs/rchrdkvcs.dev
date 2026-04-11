@@ -59,10 +59,15 @@ const navItems = ref<NavigationMenuItem[]>([
 
     <USeparator color="primary" />
 
-    <UFooter>
+    <UFooter :ui="{ root: 'bg-[#111]'}">
       <template #left>
-        <p class="text-muted text-sm">
+        <p class="text-inverted/75 text-sm">
           Copyright © {{ new Date().getFullYear() }}
+        </p>
+      </template>
+      <template #right>
+        <p class="text-inverted/75 text-sm">
+          Designed and developed by Richard Kovacs
         </p>
       </template>
     </UFooter>

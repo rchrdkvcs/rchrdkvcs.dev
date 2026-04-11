@@ -27,3 +27,8 @@
 * > * {
     font-family: var(--font-mono), serif;
 }
+
+body {
+    background-image: url('/images/textured_bg.png');
+    background-repeat: repeat;
+}

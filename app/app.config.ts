@@ -16,7 +16,7 @@ export default defineAppConfig({
       variants: {
         active: {
           true: {
-            link: "before:bg-elevated/25! before:border-default before:border",
+            link: "before:bg-elevated/75! before:border-default before:border",
           },
         },
       },
