@@ -1,37 +1,21 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from "@nuxt/ui";
-const route = useRoute();
 
-const navItems = ref<NavigationMenuItem[]>([
+const navItems: NavigationMenuItem[][] = [
   [
-    {
-      label: "home",
-      to: "/",
-    },
-    {
-      label: "skills",
-      to: "/skills",
-    },
-    {
-      label: "projects",
-      to: "/projects",
-      active: computed(() => route.path.startsWith("/projects")),
-    },
-    {
-      label: "experiences",
-      to: "/experiences",
-    },
+    { label: "home", to: "/" },
+    { label: "skills", to: "/skills" },
+    { label: "projects", to: "/projects" },
+    { label: "experiences", to: "/experiences" },
   ],
-]);
+];
 </script>
 
 <template>
   <UApp>
     <UHeader :ui="{ root: 'border-black backdrop-blur-none bg-default' }">
       <template #title>
-        <NuxtLink to="/">
-          <Logo class="size-12" />
-        </NuxtLink>
+        <Logo class="size-12" />
       </template>
 
       <UNavigationMenu

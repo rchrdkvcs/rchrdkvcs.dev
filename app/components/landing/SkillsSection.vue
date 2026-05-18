@@ -1,5 +1,16 @@
 <script setup lang="ts">
-const skills = useSkills();
+const { data: skills } = await useAsyncData("skills", () =>
+  $fetch<any[]>("/api/skills"),
+);
+
+const mappedSkills = computed(() =>
+  (skills.value ?? []).map((s) => ({
+    title: s.label,
+    description: s.description,
+    icon: s.icon,
+    to: s.link,
+  })),
+);
 </script>
 
 <template>
@@ -9,7 +20,7 @@ const skills = useSkills();
   >
     <UPageGrid>
       <UPageCard
-        v-for="(card, index) in skills"
+        v-for="(card, index) in mappedSkills"
         :key="index"
         v-bind="card"
         :ui="{ root: 'ring-primary' }"
@@ -17,5 +28,3 @@ const skills = useSkills();
     </UPageGrid>
   </UPageSection>
 </template>
-
-<style scoped></style>

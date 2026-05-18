@@ -3,8 +3,11 @@ defineProps<{
   showAll?: boolean;
 }>();
 
-const { data: projects } = await useAsyncData(`projects`, () =>
-  queryCollection("projects").order("date", "DESC").all(),
+const slugify = (name: string) =>
+  name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+const { data: projects } = await useAsyncData("projects", () =>
+  $fetch<any[]>("/api/projects"),
 );
 </script>
 
@@ -14,7 +17,7 @@ const { data: projects } = await useAsyncData(`projects`, () =>
       <UPageCard
         v-for="(card, index) in showAll ? projects : projects?.slice(0, 5)"
         :key="index"
-        :to="card.stem"
+        :to="`/projects/${slugify(card.name)}`"
         :ui="{
           root: 'ring-primary transition-all',
           header: 'flex justify-between items-center w-full mb-2',
@@ -23,31 +26,22 @@ const { data: projects } = await useAsyncData(`projects`, () =>
         :description="card.description"
       >
         <template #header>
-          <h3 class="text-xl font-semibold">{{ card.title }}</h3>
+          <h3 class="text-xl font-semibold">{{ card.name }}</h3>
           <div>
             <UButton
-              v-if="card.repo"
+              v-if="card.gh_url"
               icon="mdi:github"
               variant="ghost"
               size="lg"
               target="_blank"
-              :to="card.repo"
-              @click.stop
-            />
-            <UButton
-              v-if="card.link"
-              icon="lucide:external-link"
-              variant="ghost"
-              size="lg"
-              target="_blank"
-              :to="card.link"
+              :to="card.gh_url"
               @click.stop
             />
             <UButton
               icon="lucide:arrow-right"
               variant="ghost"
               size="lg"
-              :to="card.stem"
+              :to="`/projects/${slugify(card.name)}`"
             />
           </div>
         </template>
@@ -63,7 +57,7 @@ const { data: projects } = await useAsyncData(`projects`, () =>
     </UPageColumns>
 
     <UButton
-      v-if="!showAll && projects?.length > 5"
+      v-if="!showAll && projects && projects.length > 5"
       icon="lucide:arrow-right"
       label="view all projects"
       to="/projects"

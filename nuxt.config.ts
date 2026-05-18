@@ -6,7 +6,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   vite: { plugins: [tailwindcss()] },
   css: ["./app/assets/css/main.css"],
-  modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/image", "@nuxt/ui"],
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/image",
+    "@nuxt/ui",
+    "@nuxtjs/mdc",
+  ],
   ui: {
     colorMode: true,
     experimental: {
@@ -22,7 +27,11 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-  content: {
-    experimental: { nativeSqlite: true },
+  runtimeConfig: {
+    directusUrl: process.env.DIRECTUS_URL ?? "https://admin.rchrdkvcs.dev",
+    directusToken: process.env.DIRECTUS_TOKEN ?? "",
+    public: {
+      directusUrl: process.env.DIRECTUS_URL ?? "https://admin.rchrdkvcs.dev",
+    },
   },
 });
