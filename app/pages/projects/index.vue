@@ -20,7 +20,7 @@ const { data: projects } = await useAsyncData("projects", () =>
           :description="card.description"
         >
           <template #header>
-            <h3 class="text-xl font-semibold">{{ card.name }}</h3>
+            <h3 class="text-xl font-semibold truncate min-w-0">{{ card.name }}</h3>
             <div>
               <UButton
                 v-if="card.demo_url"
