@@ -13,15 +13,7 @@ const formatDate = (start: string, end: string | null) => {
 };
 
 const timelineItems = computed(() =>
-  [...(experiences.value ?? [])]
-    .sort((a, b) => {
-      if (!a.end_date && !b.end_date)
-        return new Date(b.start_date).getTime() - new Date(a.start_date).getTime();
-      if (!a.end_date) return -1;
-      if (!b.end_date) return 1;
-      return new Date(b.start_date).getTime() - new Date(a.start_date).getTime();
-    })
-    .map((e) => ({
+  (experiences.value ?? []).map((e) => ({
       title: `${e.post} @ ${e.company}`,
       date: formatDate(e.start_date, e.end_date),
       description: e.content,

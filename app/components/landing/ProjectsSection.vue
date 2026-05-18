@@ -3,9 +3,6 @@ defineProps<{
   showAll?: boolean;
 }>();
 
-const slugify = (name: string) =>
-  name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-
 const { data: projects } = await useAsyncData("projects", () =>
   $fetch<any[]>("/api/projects"),
 );
@@ -17,7 +14,7 @@ const { data: projects } = await useAsyncData("projects", () =>
       <UPageCard
         v-for="(card, index) in showAll ? projects : projects?.slice(0, 5)"
         :key="index"
-        :to="`/projects/${slugify(card.name)}`"
+        :to="`/projects/${card.slug}`"
         :ui="{
           root: 'ring-primary transition-all',
           header: 'flex justify-between items-center w-full mb-2',
@@ -28,6 +25,15 @@ const { data: projects } = await useAsyncData("projects", () =>
         <template #header>
           <h3 class="text-xl font-semibold">{{ card.name }}</h3>
           <div>
+            <UButton
+              v-if="card.demo_url"
+              icon="lucide:external-link"
+              variant="ghost"
+              size="lg"
+              target="_blank"
+              :to="card.demo_url"
+              @click.stop
+            />
             <UButton
               v-if="card.gh_url"
               icon="mdi:github"
@@ -41,7 +47,7 @@ const { data: projects } = await useAsyncData("projects", () =>
               icon="lucide:arrow-right"
               variant="ghost"
               size="lg"
-              :to="`/projects/${slugify(card.name)}`"
+              :to="`/projects/${card.slug}`"
             />
           </div>
         </template>

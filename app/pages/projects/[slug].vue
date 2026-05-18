@@ -2,21 +2,18 @@
 const route = useRoute();
 const slug = route.params.slug as string;
 
-const slugify = (name: string) =>
-  name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-
 const { data: projects } = await useAsyncData("projects-nav", () =>
   $fetch<any[]>("/api/projects"),
 );
 
 const content = computed(() =>
-  (projects.value ?? []).find((p) => slugify(p.name) === slug),
+  (projects.value ?? []).find((p) => p.slug === slug),
 );
 
 const navLinks = computed(() =>
   (projects.value ?? []).map((p) => ({
     label: p.name,
-    to: `/projects/${slugify(p.name)}`,
+    to: `/projects/${p.slug}`,
   })),
 );
 </script>
@@ -47,6 +44,14 @@ const navLinks = computed(() =>
           />
         </div>
         <div class="flex gap-2 mt-4">
+          <UButton
+            v-if="content.demo_url"
+            icon="lucide:external-link"
+            label="Live Demo"
+            variant="outline"
+            target="_blank"
+            :to="content.demo_url"
+          />
           <UButton
             v-if="content.gh_url"
             icon="mdi:github"
