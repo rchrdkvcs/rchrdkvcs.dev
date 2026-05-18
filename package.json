@@ -25,14 +25,5 @@
   "devDependencies": {
     "@types/node": "^25.8.0",
     "prettier": "^3.8.2"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild",
-      "sharp",
-      "unrs-resolver",
-      "vue-demi"
-    ]
   }
 }
