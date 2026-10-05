@@ -1,0 +1,14 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ProjectCard from "./ProjectCard.astro";
+
+interface Props {
+  projects: CollectionEntry<"projects">[];
+}
+---
+
+<div class="relative columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8 *:break-inside-avoid-column">
+  {Astro.props.projects.map((project) => (
+    <ProjectCard project={project} />
+  ))}
+</div>

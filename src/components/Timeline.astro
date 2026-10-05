@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import { render } from "astro:content";
+import { formatDateRange, formatDuration, getExperiences } from "../lib/content";
+
+const experiences = await getExperiences();
+const items = await Promise.all(
+  experiences.map(async (entry) => ({ ...entry.data, Content: (await render(entry)).Content })),
+);
+---
+
+<ol class="flex gap-1.5 flex-col w-full">
+  {items.map(({ company, role, logo, startDate, endDate, volunteer, Content }, index) => (
+    <li class="relative flex flex-1 gap-3">
+      <div class="relative flex items-center gap-1.5 flex-col">
+        <span class="inline-flex items-center justify-center shrink-0 size-10 ring-1 ring-primary p-0.5">
+          {logo && <Image src={logo} alt="" width={80} height={80} class="h-full w-full object-cover" />}
+        </span>
+        {index < items.length - 1 && <div role="separator" class="flex-1 rounded-full w-0.5 bg-primary" />}
+      </div>
+      <div class="w-full mt-2 pb-7.5">
+        <h3 class="font-semibold text-highlighted text-base">
+          {role} <span class="font-normal text-muted">@</span> {company}
+          {volunteer && (
+            <span class="ms-1 align-middle inline-flex items-center text-xs font-medium px-1.5 py-0.5 ring ring-inset ring-primary/50 text-toned">
+              Volunteer
+            </span>
+          )}
+        </h3>
+        <p class="text-toned text-xs/5 mt-0.5">
+          <time datetime={startDate.toISOString().slice(0, 10)}>{formatDateRange(startDate, endDate)}</time>
+          <span aria-hidden="true"> · </span>
+          {endDate ? (
+            formatDuration(startDate, endDate)
+          ) : (
+            <span data-ongoing-since={startDate.toISOString()}>{formatDuration(startDate)}</span>
+          )}
+        </p>
+        <div class="prose text-muted text-wrap text-sm [&>ul]:mt-3 [&>ul]:mb-0 [&>p]:mt-3 [&>p]:mb-0">
+          <Content />
+        </div>
+      </div>
+    </li>
+  ))}
+</ol>
+
+<script>
+  import { formatDuration } from "../lib/duration";
+
+  // The static HTML holds the duration at build time; refresh ongoing ones with today's date.
+  document.querySelectorAll<HTMLElement>("[data-ongoing-since]").forEach((el) => {
+    el.textContent = formatDuration(new Date(el.dataset.ongoingSince!));
+  });
+</script>

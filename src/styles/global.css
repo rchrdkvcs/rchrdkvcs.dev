@@ -1,0 +1,159 @@
+@import "tailwindcss";
+@import "@fontsource-variable/jetbrains-mono";
+
+:root {
+  --ui-header-height: 4rem;
+  --ui-container: 80rem;
+
+  --ui-primary: #111111;
+
+  --ui-bg: #aaaaaa;
+  --ui-bg-muted: #999999;
+  --ui-bg-elevated: #bfbfbf;
+  --ui-bg-accented: #8c8c8c;
+  --ui-bg-inverted: #333333;
+
+  --ui-text-dimmed: #525252;
+  --ui-text-muted: #333333;
+  --ui-text-toned: #222222;
+  --ui-text: #111111;
+  --ui-text-highlighted: #000000;
+  --ui-text-inverted: #e5e5e5;
+
+  --ui-border: var(--color-slate-800);
+  --ui-border-muted: var(--color-slate-700);
+  --ui-border-accented: var(--color-slate-700);
+}
+
+@theme {
+  --font-sans: "JetBrains Mono Variable", ui-monospace, monospace;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+
+  /* Single-role tokens: safe as theme colors (support opacity modifiers). */
+  --color-primary: #111111;
+  --color-elevated: #bfbfbf;
+  --color-accented: #8c8c8c;
+  --color-dimmed: #525252;
+  --color-toned: #222222;
+  --color-highlighted: #000000;
+}
+
+/* Tokens whose value differs between text / background / border. */
+@utility text-default {
+  color: var(--ui-text);
+}
+@utility text-muted {
+  color: var(--ui-text-muted);
+}
+@utility text-inverted {
+  color: var(--ui-text-inverted);
+}
+@utility bg-default {
+  background-color: var(--ui-bg);
+}
+@utility bg-muted {
+  background-color: var(--ui-bg-muted);
+}
+@utility bg-inverted {
+  background-color: var(--ui-bg-inverted);
+}
+@utility border-default {
+  border-color: var(--ui-border);
+}
+@utility border-muted {
+  border-color: var(--ui-border-muted);
+}
+
+@layer base {
+  body {
+    @apply bg-default text-default font-sans antialiased;
+    background-image: url("/images/textured_bg.png");
+    background-repeat: repeat;
+  }
+}
+
+@layer components {
+  .prose p {
+    @apply my-5 leading-7 text-pretty;
+  }
+  .prose a:not(.heading-anchor) {
+    @apply text-primary font-medium border-b border-transparent transition-colors hover:border-primary;
+  }
+  .prose strong {
+    @apply font-bold text-highlighted;
+  }
+  .prose h2 {
+    @apply relative text-2xl text-highlighted font-bold mt-12 mb-6;
+    scroll-margin-top: calc(48px + var(--ui-header-height));
+  }
+  .prose h3 {
+    @apply relative text-xl text-highlighted font-bold mt-8 mb-3;
+    scroll-margin-top: calc(32px + var(--ui-header-height));
+  }
+  .prose h4 {
+    @apply relative text-lg text-highlighted font-bold mt-6 mb-2;
+    scroll-margin-top: calc(24px + var(--ui-header-height));
+  }
+  .prose .heading-anchor::before {
+    content: "#";
+    @apply absolute -ms-8 hidden lg:flex items-center justify-center size-6 text-sm bg-elevated text-muted opacity-0 transition;
+  }
+  .prose h2 .heading-anchor::before {
+    @apply top-1;
+  }
+  .prose h3 .heading-anchor::before,
+  .prose h4 .heading-anchor::before {
+    @apply top-0.5;
+  }
+  .prose .heading-anchor:hover::before,
+  .prose .heading-anchor:focus-visible::before {
+    @apply opacity-100;
+  }
+  .prose ul {
+    @apply list-disc ps-6 my-5;
+  }
+  .prose ul ::marker {
+    color: var(--ui-border-accented);
+  }
+  .prose ol {
+    @apply list-decimal ps-6 my-5;
+  }
+  .prose ol ::marker {
+    color: var(--ui-text-muted);
+  }
+  .prose li {
+    @apply my-1.5 ps-1.5 leading-7;
+  }
+  .prose li > ul,
+  .prose li > ol {
+    @apply my-0;
+  }
+  .prose :not(pre) > code {
+    @apply px-1.5 py-0.5 text-sm font-mono font-medium inline-block border border-muted text-highlighted bg-muted;
+  }
+  .prose pre {
+    @apply relative my-5 font-mono text-sm/6 border border-muted px-4 py-3 whitespace-pre-wrap break-words overflow-x-auto;
+    background-color: var(--ui-bg-muted) !important;
+  }
+  .prose blockquote {
+    @apply border-s-4 border-muted ps-4 italic my-5;
+  }
+  .prose hr {
+    @apply border-t border-default my-12;
+  }
+  .prose img {
+    @apply w-full h-auto;
+  }
+  .prose table {
+    @apply w-full border-separate border-spacing-0 my-5 block overflow-x-auto;
+  }
+  .prose thead {
+    @apply bg-muted;
+  }
+  .prose th {
+    @apply py-3 px-4 font-semibold text-sm text-left border-e border-b border-t border-muted first:border-s;
+  }
+  .prose td {
+    @apply py-3 px-4 text-sm text-left align-top border-e border-b border-muted first:border-s;
+  }
+}

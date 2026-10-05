@@ -1,0 +1,16 @@
+---
+import { Icon } from "astro-icon/components";
+import { getSkills } from "../lib/content";
+
+const skills = await getSkills();
+---
+
+<ul class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  {skills.map(({ data: skill }) => (
+    <li class="flex flex-col items-start bg-default ring ring-primary p-4 sm:p-6">
+      <Icon name={skill.icon} class="size-5 shrink-0 text-primary mb-2.5" aria-hidden="true" />
+      <h3 class="text-base text-pretty font-semibold text-highlighted">{skill.label}</h3>
+      <p class="text-[15px] text-pretty text-muted mt-1">{skill.description}</p>
+    </li>
+  ))}
+</ul>

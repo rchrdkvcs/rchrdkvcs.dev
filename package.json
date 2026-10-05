@@ -1,29 +1,37 @@
 {
   "name": "rchrdkvcs-dev",
-  "type": "module",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "migrate:directus": "node scripts/migrate-from-directus.mjs",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "deploy": "astro build && wrangler deploy"
   },
   "dependencies": {
-    "@nuxt/eslint": "1.15.2",
-    "@nuxt/image": "2.0.0",
-    "@nuxt/ui": "4.6.1",
-    "@nuxtjs/mdc": "^0.22.0",
-    "@tailwindcss/vite": "^4.2.2",
-    "eslint": "^10.2.0",
-    "nuxt": "^4.4.2",
-    "tailwindcss": "^4.2.2",
-    "typescript": "^6.0.2",
-    "vue": "^3.5.32",
-    "vue-router": "^5.0.4"
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.5",
+    "astro-icon": "^1.2.0",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@types/node": "^25.8.0",
-    "prettier": "^3.8.2"
+    "@astrojs/check": "^0.9.10",
+    "@iconify-json/hugeicons": "^1.2.35",
+    "@iconify-json/lucide": "^1.2.139",
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/simple-icons": "^1.2.98",
+    "oxfmt": "^0.71.0",
+    "oxlint": "^1.86.0",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.147.0"
   }
 }

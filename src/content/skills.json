@@ -1,0 +1,98 @@
+[
+  {
+    "id": "vue",
+    "label": "Vue 3",
+    "icon": "simple-icons:vuedotjs",
+    "description": "Builds application interfaces with Vue 3 across Nuxt, Inertia, and Vite projects."
+  },
+  {
+    "id": "typescript",
+    "label": "TypeScript",
+    "icon": "simple-icons:typescript",
+    "description": "Uses TypeScript for frontends and AdonisJS APIs, including shared types through Tuyau."
+  },
+  {
+    "id": "nuxt",
+    "label": "Nuxt",
+    "icon": "simple-icons:nuxt",
+    "description": "Builds Vue applications with Nuxt, including full-stack products and content-driven sites."
+  },
+  {
+    "id": "astro",
+    "label": "Astro",
+    "icon": "simple-icons:astro",
+    "description": "Builds static sites with Astro and validated Markdown and JSON content collections."
+  },
+  {
+    "id": "php-laravel",
+    "label": "PHP & Laravel",
+    "icon": "simple-icons:laravel",
+    "description": "Builds web applications with PHP and Laravel, including Inertia and Vue interfaces."
+  },
+  {
+    "id": "adonisjs",
+    "label": "AdonisJS",
+    "icon": "simple-icons:adonisjs",
+    "description": "Builds TypeScript APIs and full-stack applications with AdonisJS, Lucid, and Tuyau."
+  },
+  {
+    "id": "tailwind-css",
+    "label": "Tailwind CSS",
+    "icon": "simple-icons:tailwindcss",
+    "description": "Styles responsive Vue, React, and Astro applications with Tailwind CSS."
+  },
+  {
+    "id": "postgresql",
+    "label": "PostgreSQL",
+    "icon": "simple-icons:postgresql",
+    "description": "Uses PostgreSQL for application data in full-stack products and APIs."
+  },
+  {
+    "id": "docker",
+    "label": "Docker",
+    "icon": "simple-icons:docker",
+    "description": "Uses Docker and Compose for local development and production application environments."
+  },
+  {
+    "id": "redis",
+    "label": "Redis",
+    "icon": "simple-icons:redis",
+    "description": "Includes Redis in self-hosted application stacks alongside PostgreSQL and worker processes."
+  },
+  {
+    "id": "symfony",
+    "label": "Symfony",
+    "icon": "simple-icons:symfony",
+    "description": "Builds Symfony applications with Doctrine, PostgreSQL, and Mercure real-time updates."
+  },
+  {
+    "id": "cloudflare",
+    "label": "Cloudflare",
+    "icon": "simple-icons:cloudflare",
+    "description": "Deploys static web projects to Cloudflare."
+  },
+  {
+    "id": "github-actions",
+    "label": "GitHub Actions",
+    "icon": "simple-icons:githubactions",
+    "description": "Automates project checks, builds, and deployment workflows with GitHub Actions."
+  },
+  {
+    "id": "mongodb",
+    "label": "MongoDB",
+    "icon": "simple-icons:mongodb",
+    "description": "Uses MongoDB with Mongoose to persist nested game and table state in Pokerify."
+  },
+  {
+    "id": "react",
+    "label": "React",
+    "icon": "simple-icons:react",
+    "description": "Builds React interfaces, including Inertia-powered applications."
+  },
+  {
+    "id": "git",
+    "label": "Git",
+    "icon": "simple-icons:git",
+    "description": "Uses Git and GitHub to version projects, collaborate, and manage releases."
+  }
+]

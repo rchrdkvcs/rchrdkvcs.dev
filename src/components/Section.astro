@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  id?: string;
+}
+
+const { title, description, id } = Astro.props;
+---
+
+<section id={id} class="relative isolate scroll-mt-(--ui-header-height)">
+  <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex flex-col py-8 gap-8 sm:gap-16">
+    <div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl text-pretty tracking-tight font-bold text-highlighted">{title}</h2>
+      {description && <p class="text-base sm:text-lg text-muted text-balance mt-6">{description}</p>}
+    </div>
+    <slot />
+  </div>
+</section>

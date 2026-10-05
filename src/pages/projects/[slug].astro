@@ -1,0 +1,123 @@
+---
+import type { GetStaticPaths } from "astro";
+import { render } from "astro:content";
+import { Icon } from "astro-icon/components";
+import Badge from "../../components/Badge.astro";
+import Button from "../../components/Button.astro";
+import CodeCopy from "../../components/CodeCopy.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getProjects } from "../../lib/content";
+
+export const getStaticPaths = (async () => {
+  const projects = await getProjects();
+  return projects.map((project) => ({ params: { slug: project.id }, props: { project, projects } }));
+}) satisfies GetStaticPaths;
+
+const { project, projects } = Astro.props;
+const { data } = project;
+const { Content } = await render(project);
+const hasContent = !!project.body?.trim();
+
+const index = projects.findIndex((p) => p.id === project.id);
+const prev = projects[index - 1];
+const next = projects[index + 1];
+---
+
+<Layout title={data.name} description={data.description}>
+  <div class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-10">
+    <aside class="hidden overflow-y-auto lg:block lg:max-h-[calc(100vh-var(--ui-header-height))] lg:sticky lg:top-(--ui-header-height) py-8 lg:ps-4 lg:-ms-4 lg:pe-6.5 lg:col-span-2">
+      <nav aria-label="Projects">
+        <ul class="isolate flex flex-col">
+          {projects.map((p) => {
+            const current = p.id === project.id;
+            return (
+              <li>
+                <a
+                  href={`/projects/${p.id}/`}
+                  aria-current={current ? "page" : undefined}
+                  class:list={[
+                    "relative flex items-center font-medium text-sm px-2.5 py-1.5 before:absolute before:z-[-1] before:inset-y-px before:inset-x-0 before:transition-colors hover:before:bg-elevated/50 focus:outline-none focus-visible:before:ring-2 focus-visible:before:ring-inset focus-visible:before:ring-primary",
+                    current
+                      ? "text-primary before:bg-elevated/75! before:border before:border-default"
+                      : "text-muted hover:text-highlighted transition-colors",
+                  ]}
+                >
+                  <span class="truncate">{p.data.name}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="lg:col-span-8">
+      <a
+        href="/projects/"
+        class="lg:hidden mt-6 -mb-2 inline-flex items-center gap-1.5 text-sm font-medium text-muted hover:text-highlighted transition-colors"
+      >
+        <Icon name="lucide:arrow-left" class="size-4" aria-hidden="true" />
+        All projects
+      </a>
+      <header class="relative border-b border-primary py-8">
+        <h1 class="text-3xl sm:text-4xl text-pretty font-bold text-highlighted">{data.name}</h1>
+        <p class="text-lg text-pretty text-muted mt-4">{data.description}</p>
+        {data.tags.length > 0 && (
+          <div class="flex flex-wrap gap-2 mt-4">
+            {data.tags.map((tag) => (
+              <Badge label={tag} />
+            ))}
+          </div>
+        )}
+        {(data.demo || data.github) && (
+          <div class="flex gap-2 mt-4">
+            {data.demo && (
+              <Button href={data.demo} label="Live Demo" icon="lucide:external-link" variant="outline" external />
+            )}
+            {data.github && (
+              <Button href={data.github} label="Source Code" icon="mdi:github" variant="outline" external />
+            )}
+          </div>
+        )}
+      </header>
+
+      <div class="mt-8 pb-12">
+        {hasContent ? (
+          <div class="prose max-w-none">
+            <Content />
+            <CodeCopy />
+          </div>
+        ) : (
+          <p class="text-muted py-8">Detailed project documentation coming soon.</p>
+        )}
+      </div>
+
+      {(prev || next) && (
+        <nav aria-label="More projects" class="grid sm:grid-cols-2 gap-4 border-t border-primary pt-8 pb-24">
+          {prev && (
+            <a
+              href={`/projects/${prev.id}/`}
+              class="group flex flex-col gap-1 ring ring-primary p-4 hover:bg-elevated/50 transition-colors"
+            >
+              <span class="inline-flex items-center gap-1.5 text-xs text-toned">
+                <Icon name="lucide:arrow-left" class="size-4" aria-hidden="true" /> Previous
+              </span>
+              <span class="font-semibold text-highlighted truncate">{prev.data.name}</span>
+            </a>
+          )}
+          {next && (
+            <a
+              href={`/projects/${next.id}/`}
+              class="group flex flex-col items-end gap-1 ring ring-primary p-4 hover:bg-elevated/50 transition-colors sm:col-start-2 text-right"
+            >
+              <span class="inline-flex items-center gap-1.5 text-xs text-toned">
+                Next <Icon name="lucide:arrow-right" class="size-4" aria-hidden="true" />
+              </span>
+              <span class="font-semibold text-highlighted truncate max-w-full">{next.data.name}</span>
+            </a>
+          )}
+        </nav>
+      )}
+    </div>
+  </div>
+</Layout>

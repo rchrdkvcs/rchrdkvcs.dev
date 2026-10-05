@@ -1,0 +1,108 @@
+---
+import { Icon } from "astro-icon/components";
+import Button from "./Button.astro";
+import Logo from "./Logo.astro";
+
+interface Props {
+  email: string;
+}
+
+const { email } = Astro.props;
+
+const nav = [
+  { label: "home", href: "/" },
+  { label: "skills", href: "/skills/" },
+  { label: "projects", href: "/projects/" },
+  { label: "experiences", href: "/experiences/" },
+];
+
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isActive = (href: string) => {
+  const target = href.replace(/\/$/, "") || "/";
+  return target === "/" ? path === "/" : path === target || path.startsWith(`${target}/`);
+};
+
+const link =
+  "relative flex items-center gap-1.5 font-medium text-sm px-2.5 py-1.5 transition-colors focus:outline-none focus-visible:before:ring-2 focus-visible:before:ring-inset focus-visible:before:ring-primary before:absolute before:z-[-1]";
+const active = "text-primary before:bg-elevated/75 before:border before:border-default";
+const inactive = "text-muted hover:text-highlighted";
+---
+
+<header class="border-b border-black h-(--ui-header-height) sticky top-0 z-50 bg-default">
+  <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-full">
+    <div class="lg:flex-1 flex items-center gap-1.5">
+      <a href="/" aria-label="Home" class="shrink-0 focus-visible:outline-primary">
+        <Logo class="size-12" />
+      </a>
+    </div>
+
+    <nav aria-label="Main" class="hidden lg:flex">
+      <ul class="isolate flex items-center">
+        {nav.map((item) => (
+          <li class="py-2">
+            <a
+              href={item.href}
+              aria-current={isActive(item.href) ? "page" : undefined}
+              class:list={[link, "before:inset-x-px before:inset-y-0", isActive(item.href) ? active : inactive]}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="flex items-center justify-end lg:flex-1 gap-1.5">
+      <Button href={`mailto:${email}`} label="Contact me" icon="hugeicons:mail-01" />
+      <button
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-menu-toggle
+        class="group inline-flex items-center p-1.5 -me-1.5 text-default hover:bg-elevated focus:outline-none focus-visible:bg-elevated cursor-pointer lg:hidden"
+      >
+        <Icon name="lucide:menu" class="size-5 group-aria-expanded:hidden" aria-hidden="true" />
+        <Icon name="lucide:x" class="size-5 hidden group-aria-expanded:block" aria-hidden="true" />
+      </button>
+    </div>
+  </div>
+
+  <nav
+    id="mobile-menu"
+    aria-label="Main"
+    hidden
+    class="lg:hidden absolute inset-x-0 top-full h-[calc(100dvh-var(--ui-header-height))] overflow-y-auto bg-default border-t border-black px-4 sm:px-6 py-4"
+  >
+    <ul class="isolate flex flex-col">
+      {nav.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            aria-current={isActive(item.href) ? "page" : undefined}
+            class:list={[link, "before:inset-y-px before:inset-x-0", isActive(item.href) ? active : inactive]}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>("[data-menu-toggle]");
+  const menu = document.getElementById("mobile-menu");
+
+  const setOpen = (open: boolean) => {
+    if (!toggle || !menu) return;
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    menu.hidden = !open;
+    document.body.classList.toggle("overflow-hidden", open);
+  };
+
+  toggle?.addEventListener("click", () => setOpen(toggle.getAttribute("aria-expanded") !== "true"));
+  document.addEventListener("keydown", (e) => e.key === "Escape" && setOpen(false));
+  matchMedia("(min-width: 64rem)").addEventListener("change", (e) => e.matches && setOpen(false));
+</script>
