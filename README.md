@@ -96,7 +96,8 @@ Skills are shown in the order they appear in `skills.json`. Icons use [Iconify](
 
 Deployed on Cloudflare as static assets (`wrangler.jsonc`, no Worker script). Cache headers for hashed assets live in `public/_headers`.
 
-- Workers Builds / Pages: build command `pnpm build`, output directory `dist`.
+- Workers Builds: build command `pnpm build`, deploy command `npx wrangler deploy`, root directory `/`. Set the build variable `PNPM_VERSION=11.22.0` to match `packageManager` in `package.json`; the workspace's `allowBuilds` configuration requires pnpm 11. The default Cloudflare build environment failed during dependency installation with `packages field missing or empty`.
+- Pages: build command `pnpm build`, output directory `dist`; use the same `PNPM_VERSION` build variable.
 - Manual: `pnpm run deploy` (builds, then runs `wrangler deploy`).
 
 ## Migrating from Directus
