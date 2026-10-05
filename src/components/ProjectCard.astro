@@ -1,0 +1,62 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Badge from "./Badge.astro";
+import Button from "./Button.astro";
+
+interface Props {
+  project: CollectionEntry<"projects">;
+}
+
+const { id, data } = Astro.props.project;
+const href = `/projects/${id}/`;
+---
+
+<article class="relative flex bg-default ring ring-primary has-focus-visible:ring-2 hover:bg-elevated/50 transition-all">
+  <a href={href} aria-label={data.name} class="focus:outline-none">
+    <span class="absolute inset-0" aria-hidden="true"></span>
+  </a>
+  <div class="flex flex-col flex-1 items-start p-4 sm:p-6">
+    <div class="w-full">
+      <header class="flex justify-between items-center w-full mb-2">
+        <h3 class="text-xl font-semibold truncate min-w-0">{data.name}</h3>
+        <div class="flex shrink-0">
+          {data.demo && (
+            <Button
+              href={data.demo}
+              icon="lucide:external-link"
+              variant="ghost"
+              size="lg"
+              external
+              ariaLabel={`${data.name} live demo`}
+            />
+          )}
+          {data.github && (
+            <Button
+              href={data.github}
+              icon="mdi:github"
+              variant="ghost"
+              size="lg"
+              external
+              ariaLabel={`${data.name} source code`}
+            />
+          )}
+          <Button
+            href={href}
+            icon="lucide:arrow-right"
+            variant="ghost"
+            size="lg"
+            ariaLabel={`Read more about ${data.name}`}
+          />
+        </div>
+      </header>
+      <p class="text-[15px] text-pretty text-muted">{data.description}</p>
+    </div>
+    {data.tags.length > 0 && (
+      <footer class="pt-4 mt-auto flex flex-wrap gap-2">
+        {data.tags.map((tag) => (
+          <Badge label={tag} />
+        ))}
+      </footer>
+    )}
+  </div>
+</article>

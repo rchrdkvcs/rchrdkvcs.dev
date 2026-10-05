@@ -1,0 +1,62 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  href: string;
+  label?: string;
+  icon?: string;
+  variant?: "solid" | "outline" | "ghost" | "neutral";
+  size?: "md" | "lg" | "xl";
+  external?: boolean;
+  ariaLabel?: string;
+  download?: boolean;
+  class?: string;
+}
+
+const {
+  href,
+  label,
+  icon,
+  variant = "solid",
+  size = "md",
+  external = false,
+  ariaLabel,
+  download = false,
+  class: className,
+} = Astro.props;
+
+const variants = {
+  solid:
+    "text-inverted bg-primary hover:bg-primary/75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+  outline:
+    "ring ring-inset ring-primary/50 text-primary hover:bg-primary/10 focus-visible:ring-2 focus-visible:ring-primary",
+  ghost: "text-primary hover:bg-primary/10 focus-visible:bg-primary/10",
+  neutral: "text-default hover:bg-elevated focus-visible:bg-elevated",
+};
+
+const sizes = {
+  md: { label: "px-2.5 py-1.5 text-sm gap-1.5", iconOnly: "p-1.5", icon: "size-5" },
+  lg: { label: "px-3 py-2 text-sm gap-2", iconOnly: "p-2", icon: "size-5" },
+  xl: { label: "px-3 py-2 text-base gap-2", iconOnly: "p-2", icon: "size-6" },
+};
+
+const s = sizes[size];
+---
+
+<a
+  href={href}
+  aria-label={ariaLabel}
+  title={label ? undefined : ariaLabel}
+  download={download || undefined}
+  target={external ? "_blank" : undefined}
+  rel={external ? "noopener noreferrer" : undefined}
+  class:list={[
+    "relative font-medium inline-flex items-center transition-colors cursor-pointer focus:outline-none",
+    variants[variant],
+    label ? s.label : s.iconOnly,
+    className,
+  ]}
+>
+  {icon && <Icon name={icon} class:list={["shrink-0", s.icon]} aria-hidden="true" />}
+  {label && <span class="truncate">{label}</span>}
+</a>

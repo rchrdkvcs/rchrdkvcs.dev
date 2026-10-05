@@ -1,0 +1,14 @@
+---
+import ProjectColumns from "../../components/ProjectColumns.astro";
+import Section from "../../components/Section.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getProjects } from "../../lib/content";
+
+const projects = await getProjects();
+---
+
+<Layout title="Projects">
+  <Section title="projects" description="A selection of things I've built.">
+    <ProjectColumns projects={projects} />
+  </Section>
+</Layout>

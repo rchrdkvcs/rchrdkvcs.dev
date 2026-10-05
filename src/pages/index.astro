@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import Button from "../components/Button.astro";
+import ProjectColumns from "../components/ProjectColumns.astro";
+import Section from "../components/Section.astro";
+import SkillGrid from "../components/SkillGrid.astro";
+import Timeline from "../components/Timeline.astro";
+import Layout from "../layouts/Layout.astro";
+import { getProfile, getProjects } from "../lib/content";
+
+const profile = await getProfile();
+const projects = await getProjects();
+const FEATURED = 5;
+
+const links = [
+  profile.github && { icon: "hugeicons:github", href: profile.github, label: "GitHub" },
+  profile.twitter && { icon: "hugeicons:new-twitter", href: profile.twitter, label: "X" },
+  profile.linkedin && { icon: "hugeicons:linkedin-02", href: profile.linkedin, label: "LinkedIn" },
+].filter((l) => !!l);
+---
+
+<Layout>
+  <div class="relative isolate">
+    <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:grid py-16 sm:py-32 lg:py-40 gap-12 sm:gap-y-24 lg:grid-cols-2 lg:items-center">
+      <div class="lg:order-last">
+        {profile.availability && (
+          <p class="mb-6 inline-flex items-center gap-2 text-sm font-medium text-highlighted ring ring-inset ring-primary/50 px-2.5 py-1">
+            <span class="size-2 bg-[#0F53FF]" aria-hidden="true" />
+            {profile.availability}
+          </p>
+        )}
+        <p class="mb-4 font-semibold text-primary">Hey there, I'm</p>
+        <h1 class="text-5xl sm:text-7xl text-pretty tracking-tight font-bold text-highlighted">{profile.name}</h1>
+        <p class="text-lg sm:text-xl/8 text-muted text-pretty mt-6">{profile.bio}</p>
+        {profile.location && (
+          <p class="mt-4 inline-flex items-center gap-1.5 text-sm text-muted">
+            <Icon name="lucide:map-pin" class="size-4 shrink-0" aria-hidden="true" />
+            {profile.location}
+          </p>
+        )}
+        <div class="mt-10 flex flex-wrap gap-3 sm:gap-x-6">
+          {profile.resume && (
+            <Button href={profile.resume} label="Download CV" icon="lucide:download" size="xl" download />
+          )}
+          <Button
+            href={`mailto:${profile.email}`}
+            label={profile.email}
+            icon="hugeicons:mail-01"
+            variant="outline"
+            size="xl"
+          />
+          {links.map((l) => (
+            <Button href={l.href} icon={l.icon} ariaLabel={l.label} variant="outline" size="xl" external />
+          ))}
+        </div>
+      </div>
+      {profile.avatar && (
+        <Image
+          src={profile.avatar}
+          alt={profile.name}
+          widths={[256, 384, 768]}
+          sizes="(min-width: 640px) 384px, 256px"
+          loading="eager"
+          fetchpriority="high"
+          class="mx-auto w-64 sm:w-96 h-auto shadow-2xl -rotate-2"
+        />
+      )}
+    </div>
+  </div>
+
+  <Section id="projects" title="projects" description="A selection of things I've built.">
+    <ProjectColumns projects={projects.slice(0, FEATURED)} />
+    {projects.length > FEATURED && (
+      <Button
+        href="/projects/"
+        label={`view all ${projects.length} projects`}
+        icon="lucide:arrow-right"
+        variant="outline"
+        class="w-fit mx-auto"
+      />
+    )}
+  </Section>
+
+  <Section id="experiences" title="experiences" description="Where I've worked and what I did there.">
+    <Timeline />
+  </Section>
+
+  <Section id="skills" title="skills" description="Technologies I work with day to day.">
+    <SkillGrid />
+  </Section>
+</Layout>
