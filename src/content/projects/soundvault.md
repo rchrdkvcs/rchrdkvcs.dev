@@ -3,7 +3,7 @@ name: "SoundVault"
 description: "A full-stack music platform for producers and sound designers to upload, share, and discover VST presets and sound packs, built as a PWA with Vue 3 and AdonisJS."
 tags: ["Vue", "AdonisJS", "TypeScript", "PostgreSQL"]
 github: "https://github.com/rchrdkvcs/soundvault.cloud"
-order: 9
+order: 14
 ---
 
 ## Context

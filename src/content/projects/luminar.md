@@ -3,7 +3,7 @@ name: "Luminar"
 description: "A Windows desktop utility that turns monitor screens into adjustable soft lights for streaming, with per-display controls and OBS capture exclusion."
 tags: ["Vue", "TypeScript", "Windows", "Desktop", "Streaming"]
 github: "https://github.com/rchrdkvcs/luminar"
-order: 8
+order: 13
 ---
 
 ## Context

@@ -4,8 +4,10 @@ description: "Landing site for Inlinea, an independent product design and web de
 tags: ["Astro", "TypeScript", "Tailwind CSS 4", "Cloudflare"]
 github: "https://github.com/rchrdkvcs/inlinea.fr"
 demo: "https://inlinea.fr"
-order: 14
+order: 19
 ---
+
+![Inlinea home page](./images/inlinea-1.png)
 
 ## Context
 
