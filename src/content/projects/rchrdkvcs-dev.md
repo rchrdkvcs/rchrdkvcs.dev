@@ -4,7 +4,7 @@ description: "My personal portfolio, rebuilt as a static site with Astro 7, Tail
 tags: ["Astro", "TypeScript", "Tailwind CSS 4", "Markdown", "Cloudflare"]
 github: "https://github.com/rchrdkvcs/rchrdkvcs.dev"
 demo: "https://rchrdkvcs.dev"
-order: 2
+order: 3
 ---
 
 ## Context

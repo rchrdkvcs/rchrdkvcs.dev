@@ -3,7 +3,7 @@ name: "Ox Lib Reskin"
 description: "A custom UI reskin for the ox_lib FiveM resource, providing a modern and clean redesign of menus, notifications, and context panels for roleplay servers."
 tags: ["TypeScript", "React", "FiveM", "Lua"]
 github: "https://github.com/rchrdkvcs/ox-lib-reskin"
-order: 12
+order: 15
 ---
 
 ## 5 Stars, 1 Fork

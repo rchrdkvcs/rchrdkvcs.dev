@@ -3,7 +3,7 @@ name: "Gitify"
 description: "A GitHub project management tool for organizing repositories into projects and favorites, built with AdonisJS and Nuxt using the Aduxt monorepo stack."
 tags: ["AdonisJS", "Nuxt", "TypeScript", "Docker"]
 github: "https://github.com/rchrdkvcs/gitify"
-order: 7
+order: 10
 ---
 
 ## The Idea

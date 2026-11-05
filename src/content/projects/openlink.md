@@ -4,8 +4,10 @@ description: "A self-hosted link management application for personal and team us
 tags: ["Laravel", "PHP", "Vue 3", "TypeScript", "Inertia.js", "PostgreSQL", "Redis", "Docker"]
 github: "https://github.com/rchrdkvcs/openlink"
 demo: "https://opnlnk.app"
-order: 1
+order: 2
 ---
+
+![Openlink landing page](./images/openlink-1.png)
 
 ## Context
 
@@ -18,6 +20,8 @@ I built Openlink as a self-hosted alternative for managing short links across pe
 - Scheduled, expiring, password-protected, and visit-limited links
 - Customizable QR codes and privacy-conscious analytics
 - Email/password authentication, two-factor authentication, optional Google and Discord sign-in, user API tokens, and an HTTP API
+
+![Link journey: create, route, share as QR, measure](./images/openlink-2.png)
 
 ## Stack
 
