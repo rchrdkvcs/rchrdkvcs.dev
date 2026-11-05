@@ -7,7 +7,7 @@ demo: "https://opnlnk.app"
 order: 2
 ---
 
-![Openlink landing page](./images/openlink-1.png)
+![Links list with custom domain, folders, tags and click counts](./images/openlink-1.png)
 
 ## Context
 
@@ -21,7 +21,9 @@ I built Openlink as a self-hosted alternative for managing short links across pe
 - Customizable QR codes and privacy-conscious analytics
 - Email/password authentication, two-factor authentication, optional Google and Discord sign-in, user API tokens, and an HTTP API
 
-![Link journey: create, route, share as QR, measure](./images/openlink-2.png)
+![30-day analytics for a launch link, with visits and QR scans](./images/openlink-2.png)
+
+![QR code editor with a styled dot pattern](./images/openlink-3.png)
 
 ## Stack
 

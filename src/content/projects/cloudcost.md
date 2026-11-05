@@ -3,7 +3,7 @@ name: "CloudCost"
 description: "A cloud pricing comparison tool with AI-powered recommendations that aggregates pricing data from multiple providers like DigitalOcean and Hetzner."
 tags: ["AdonisJS", "Nuxt", "TypeScript", "AI"]
 github: "https://github.com/rchrdkvcs/cloudcost"
-order: 14
+order: 16
 ---
 
 ## Why This Exists

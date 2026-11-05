@@ -4,7 +4,7 @@ description: "A personal presentation manager built on Slidev: each talk is a st
 tags: ["Slidev", "Vue", "TypeScript", "Cloudflare Workers"]
 github: "https://github.com/rchrdkvcs/talks"
 demo: "https://talks.rchrdkvcs.dev"
-order: 7
+order: 9
 ---
 
 ![Talk catalog](./images/talks-1.png)

@@ -3,7 +3,7 @@ name: "Pokerify"
 description: "A REST API for simulating Texas Hold'em poker games with JWT authentication, AI opponents, and full game logic including hand evaluation and betting rounds."
 tags: ["NestJS", "MongoDB", "TypeScript", "Docker"]
 github: "https://github.com/rchrdkvcs/pokerify"
-order: 13
+order: 15
 ---
 
 ## A Poker Engine, Not a Poker Game

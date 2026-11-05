@@ -6,7 +6,7 @@ github: "https://github.com/rchrdkvcs/via-terminal"
 order: 1
 ---
 
-![Via, remote file browser in its own tab](./images/via-1.png)
+![Split view with htop over SSH next to a live deploy and its logs](./images/via-1.png)
 
 ## Context
 
@@ -22,7 +22,9 @@ I spend my days jumping between local shells and remote servers. Most terminals 
 - A remote SFTP explorer, docked beside a terminal or in its own tab, with transfers and in-app editing
 - Signed in-app updates, published as installers on GitHub Releases
 
-![SFTP explorer docked beside an SSH session](./images/via-2.png)
+![Local project tab with git status, git log and a test run](./images/via-2.png)
+
+![Vault with hosts grouped by environment and their inherited identity](./images/via-3.png)
 
 ## Local first
 

@@ -4,7 +4,7 @@ description: "Member of Just Fucking Use Vue, an open-source community organizat
 tags: ["Vue", "Nuxt", "Nuxt UI", "Open Source"]
 github: "https://github.com/Just-Fucking-Use-Vue-js"
 demo: "https://justfuckingusevuejs.com/"
-order: 5
+order: 7
 ---
 
 ## Not My Project — But I'm Part of It

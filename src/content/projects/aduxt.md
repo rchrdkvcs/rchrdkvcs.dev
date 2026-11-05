@@ -4,7 +4,7 @@ description: "A CLI scaffolding tool for creating fullstack monorepos with Adoni
 tags: ["AdonisJS", "Nuxt", "Bun", "Tuyau", "Open Source"]
 github: "https://github.com/rchrdkvcs/create-aduxt"
 demo: "https://www.npmjs.com/package/create-aduxt"
-order: 8
+order: 10
 ---
 
 ## One Command

@@ -4,7 +4,7 @@ description: "A full-stack esports platform for managing an esports organization
 tags: ["Nuxt", "AdonisJS", "TypeScript", "Tuyau", "Nuxt UI", "Tailwind CSS", "SSE", "PostgreSQL"]
 github: "https://github.com/Hexagone6"
 demo: "https://hexagone6.fr"
-order: 4
+order: 6
 ---
 
 ## The Biggest One

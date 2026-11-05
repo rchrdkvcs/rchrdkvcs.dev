@@ -4,7 +4,7 @@ description: "A French Guide Michelin redesign built with Nuxt 4, Vue, Nuxt UI, 
 tags: ["Nuxt 4", "Vue", "TypeScript", "Nuxt UI", "Tailwind CSS 4"]
 github: "https://github.com/rchrdkvcs/guide.michelin.com"
 demo: "https://michelin.rchrdkvcs.dev"
-order: 9
+order: 11
 ---
 
 ![Guide Michelin redesign home page](./images/guide-michelin-1.png)

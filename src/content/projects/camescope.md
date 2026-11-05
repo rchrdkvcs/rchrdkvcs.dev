@@ -3,12 +3,14 @@ name: "Camescope"
 description: "A WebRTC streaming tool for esports broadcasts: remote players share their camera from a link, and an admin panel composes them into OBS layouts in real time."
 tags: ["AdonisJS", "Vue", "Inertia.js", "WebRTC", "mediasoup", "Socket.IO", "Docker"]
 github: "https://github.com/rchrdkvcs/camescope"
-order: 6
+order: 8
 ---
 
 ## Context
 
 During online tournaments, casters want to show player cameras on stream. Asking every player to set up their own streaming software does not scale. Camescope gives each player a link: they open it, allow their camera, and the production team gets the feed directly in OBS.
+
+![Guest page publishing a camera feed, with a QR code to join from a phone](./images/camescope-1.png)
 
 ## How it works
 
@@ -19,6 +21,8 @@ The app has three views:
 - **OBS**: a browser source that renders the live composition for the broadcast
 
 Sessions move from draft to active to finished. Layouts are stored as JSON configurations (camera positions, sizes, background), with presets and custom layouts that can be duplicated and edited.
+
+![OBS overlay showing five live player cameras](./images/camescope-2.png)
 
 ## Real-time media
 
